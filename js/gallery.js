@@ -92,10 +92,10 @@ let instance = null;
 
 // ---------- КЛИК ПО ГАЛЕРЕЕ ----------
 galleryContainer.addEventListener("click", (event) => {
-  event.preventDefault();
-
   const img = event.target.closest(".gallery-image");
   if (!img) return;
+
+  event.preventDefault();
 
   const largeImageURL = img.dataset.source;
   const description = img.alt;
